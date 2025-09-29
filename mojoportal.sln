@@ -50,6 +50,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperFlexiData.SQLite", "Pl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mojoPortal.Core", "mojoPortal.Core\mojoPortal.Core.csproj", "{FEA72210-0415-4133-BDF9-8877683BA832}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mojoPortal.Data.EFCore", "mojoPortal.Data.EFCore\mojoPortal.Data.EFCore.csproj", "{A8B1E4F2-3C5D-4E6F-7A8B-9C0D1E2F3A4B}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EA9DE58E-4583-43D4-8C9E-43D433A27729}"
 	ProjectSection(SolutionItems) = preProject
 		CommonAssemblyInfo.cs = CommonAssemblyInfo.cs
