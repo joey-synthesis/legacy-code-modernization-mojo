@@ -78,17 +78,18 @@ namespace mojoPortal.Data.EFCore.Configurations
                 .IsRequired(false); // Optional field
 
             // DateTime properties with default values
+            // Note: Database-specific defaults will be applied in migrations
+            // SQLite uses: CURRENT_TIMESTAMP
+            // SQL Server uses: GETUTCDATE()
             builder.Property(e => e.CreatedUtc)
                 .HasColumnName("CreatedUtc")
                 .IsRequired()
-                .HasDefaultValueSql("GETUTCDATE()") // SQL Server default, will need provider-specific handling
-                .ValueGeneratedOnAdd(); // Ensures EF Core uses database-generated value
+                .ValueGeneratedOnAdd();
 
             builder.Property(e => e.LastModUtc)
                 .HasColumnName("LastModUtc")
                 .IsRequired()
-                .HasDefaultValueSql("GETUTCDATE()") // SQL Server default, will need provider-specific handling
-                .ValueGeneratedOnAdd(); // Ensures EF Core uses database-generated value
+                .ValueGeneratedOnAdd();
 
             // Moderation properties
             builder.Property(e => e.ModerationStatus)
